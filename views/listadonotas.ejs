@@ -1,0 +1,12 @@
+<%- include('header') -%>
+    <h1>Listado de notas</h1>
+    <ul>
+        <% notas.forEach(nota => { %>
+            <li>
+                <a href="/notas/<%=nota.id%>">
+                    <%=nota.titulo %>
+                </a>
+            </li>
+            <% }) %>
+    </ul>
+<%- include('footer') -%>

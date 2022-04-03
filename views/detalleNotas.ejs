@@ -1,0 +1,12 @@
+<%- include('header') -%>
+  <h1><%=notas.titulo %></h1>
+  <p><%= notas.texto %></p>
+  <p>Actualmente en estado <%= notas.estado %></p>
+  <p>Creado el dia <%= notas.created_at %> </p>
+  <a href="/notas/editar/<%=notas.id%>">
+    <button>Editar</button>
+  </a>
+  <form action="/notas/borrar/<%=notas.id%>" method="post">
+      <button type="submit">Borrar</button>
+  </form>
+<%- include('footer') -%>

@@ -1,0 +1,23 @@
+<%- include('header') %>
+    <h1>Editar Notas</h1>
+    <form action="/notas/editar/<%=notas.id%>" method="POST">
+        <div>
+            <label for="">Titulo</label>
+            <input type="text" name="titulo" required value="<%=notas.titulo%>">
+        </div>
+        <div>
+            <label for="">Texto</label>
+            <input type="text" name="texto" required value="<%=notas.texto%>">
+        </div>
+        <div>
+            <label for="">Estado</label>
+            <input type="radio" name="estado" value="progreso" required>
+            <label for="">Progreso</label>
+            <input type="radio" name="estado" value="incompleta" required>
+            <label for="">Incompleta</label>
+            <input type="radio" name="estado" value="completa" required>
+            <label for="">Completa</label>
+        </div>
+        <button type="submit">Editar Nota</button>
+    </form>
+<%- include('footer') %>
